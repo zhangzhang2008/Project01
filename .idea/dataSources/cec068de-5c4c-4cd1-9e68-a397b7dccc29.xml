@@ -1,0 +1,3195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="bg_pf@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.4">
+    <root id="1"/>
+    <schema id="2" parent="1" name="bg_pf">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="bg_global"/>
+    <schema id="4" parent="1" name="bg_sn"/>
+    <schema id="5" parent="1" name="information_schema"/>
+    <schema id="6" parent="1" name="mysql"/>
+    <schema id="7" parent="1" name="performance_schema"/>
+    <schema id="8" parent="1" name="sys"/>
+    <schema id="9" parent="1" name="zts_global"/>
+    <table id="10" parent="2" name="game_switch_config"/>
+    <table id="11" parent="2" name="rp_game_manager"/>
+    <table id="12" parent="2" name="sn_activity_bet_statistic">
+      <Comment>打码活动统计</Comment>
+    </table>
+    <table id="13" parent="2" name="sn_activity_charge_statistic">
+      <Comment>天天加奖活动统计</Comment>
+    </table>
+    <table id="14" parent="2" name="sn_activity_dailyprize_statistic">
+      <Comment>天天加奖活动统计</Comment>
+    </table>
+    <table id="15" parent="2" name="sn_activity_dailytask_statistic">
+      <Comment>每日任务统计表</Comment>
+    </table>
+    <table id="16" parent="2" name="sn_activity_dailytask_user">
+      <Comment>推广活动注册用户表</Comment>
+    </table>
+    <table id="17" parent="2" name="sn_activity_group"/>
+    <table id="18" parent="2" name="sn_activity_popularize_statistic">
+      <Comment>推广注册活动统计表</Comment>
+    </table>
+    <table id="19" parent="2" name="sn_activity_popularize_user">
+      <Comment>推广活动注册用户表</Comment>
+    </table>
+    <table id="20" parent="2" name="sn_activity_promotion_statistic">
+      <Comment>晋级打码历史</Comment>
+    </table>
+    <table id="21" parent="2" name="sn_activity_redpacket_come_detail"/>
+    <table id="22" parent="2" name="sn_activity_redpacket_statistic">
+      <Comment>红包活动统计</Comment>
+    </table>
+    <table id="23" parent="2" name="sn_activity_turntable_draw_detail">
+      <Comment>大转盘用户表</Comment>
+    </table>
+    <table id="24" parent="2" name="sn_activity_turntable_user">
+      <Comment>大转盘用户表</Comment>
+    </table>
+    <table id="25" parent="2" name="sn_agent_code_settings"/>
+    <table id="26" parent="2" name="sn_bank_draw_order_set"/>
+    <table id="27" parent="2" name="sn_customer_service"/>
+    <table id="28" parent="2" name="sn_game_setting"/>
+    <table id="29" parent="2" name="sn_game_switch_config"/>
+    <table id="30" parent="2" name="sn_mobile_bind_reward_detail"/>
+    <table id="31" parent="2" name="sn_mobile_bind_reward_set"/>
+    <table id="32" parent="2" name="sn_mobile_reward_record"/>
+    <table id="33" parent="2" name="sn_module_log"/>
+    <table id="34" parent="2" name="sn_rank_list_config">
+      <Comment>棋牌APP排行榜</Comment>
+    </table>
+    <table id="35" parent="2" name="sn_root_agent_setting"/>
+    <table id="36" parent="2" name="sn_sub_account_group"/>
+    <table id="37" parent="2" name="sn_user_game_switch_config"/>
+    <table id="38" parent="2" name="sn_user_import_item_new"/>
+    <table id="39" parent="2" name="sn_user_import_new"/>
+    <table id="40" parent="2" name="sn_virtual_prize_config"/>
+    <table id="41" parent="2" name="yuebao_cashflow_record">
+      <Comment>余额宝金流记录表</Comment>
+    </table>
+    <table id="42" parent="2" name="yuebao_income_detail">
+      <Comment>余额宝收益详情表</Comment>
+    </table>
+    <table id="43" parent="2" name="yuebao_income_total">
+      <Comment>余额宝收益详情汇总表</Comment>
+    </table>
+    <table id="44" parent="2" name="yuebao_opt_log">
+      <Comment>余额宝操作日志表</Comment>
+    </table>
+    <table id="45" parent="2" name="yuebao_record_detail">
+      <Comment>余额宝交易记录详情表</Comment>
+    </table>
+    <table id="46" parent="2" name="yuebao_record_total">
+      <Comment>余额宝交易记录汇总表</Comment>
+    </table>
+    <table id="47" parent="2" name="yuebao_setting">
+      <Comment>余额宝设定表</Comment>
+    </table>
+    <table id="48" parent="2" name="yuebao_setting_log">
+      <Comment>余额宝设定日志表</Comment>
+    </table>
+    <column id="49" parent="10" name="config_key">
+      <Position>1</Position>
+      <Comment>游戏代码</Comment>
+      <DataType>varchar(128)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="50" parent="10" name="config_name">
+      <Position>2</Position>
+      <Comment>游戏名称</Comment>
+      <DataType>varchar(25)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="51" parent="10" name="description">
+      <Position>3</Position>
+      <Comment>描述</Comment>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="52" parent="10" name="state">
+      <Position>4</Position>
+      <Comment>0 停用/1启用/3删除</Comment>
+      <DataType>tinyint(4)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="53" parent="10" name="create_time">
+      <Position>5</Position>
+      <Comment>创建时间</Comment>
+      <DataType>datetime|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="54" parent="10" name="update_time">
+      <Position>6</Position>
+      <DataType>datetime|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="55" parent="10" name="operator">
+      <Position>7</Position>
+      <Comment>修改用户</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="56" parent="10" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>config_key</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="57" parent="11" name="record_id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="58" parent="11" name="sn">
+      <Position>2</Position>
+      <Comment>厅主ID</Comment>
+      <DataType>varchar(4)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="59" parent="11" name="game_id">
+      <Position>3</Position>
+      <Comment>游戏Id</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="60" parent="11" name="game_name">
+      <Position>4</Position>
+      <Comment>游戏名称</Comment>
+      <DataType>varchar(64)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="61" parent="11" name="game_name_en">
+      <Position>5</Position>
+      <Comment>游戏英文名称</Comment>
+      <DataType>varchar(64)|0</DataType>
+    </column>
+    <column id="62" parent="11" name="game_type">
+      <Position>6</Position>
+      <Comment>游戏类型：1 真人 2 体育 3 电子 4 彩票 5 捕鱼 6 棋牌</Comment>
+      <DataType>tinyint(4)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="63" parent="11" name="audit_flag">
+      <Position>7</Position>
+      <Comment>稽核：1 是 2 否</Comment>
+      <DataType>tinyint(4)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;1&apos;</DefaultExpression>
+    </column>
+    <column id="64" parent="11" name="collect_flag">
+      <Position>8</Position>
+      <Comment>报表采集1 是 2 否</Comment>
+      <DataType>tinyint(4)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;1&apos;</DefaultExpression>
+    </column>
+    <column id="65" parent="11" name="collect_bj_flag">
+      <Position>9</Position>
+      <Comment>是否支持北京时间1表示支持，2表示不支持</Comment>
+      <DataType>tinyint(4)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;1&apos;</DefaultExpression>
+    </column>
+    <column id="66" parent="11" name="sn_types">
+      <Position>10</Position>
+      <Comment>公司类型 1、综合包网 2、API包网 4、彩票包网 6、棋牌包网、7、旧棋牌</Comment>
+      <DataType>varchar(32)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="67" parent="11" name="game_switch">
+      <Position>11</Position>
+      <Comment>游戏开关 1 开启 2 关闭</Comment>
+      <DataType>tinyint(4)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;1&apos;</DefaultExpression>
+    </column>
+    <column id="68" parent="11" name="game_rpc_id">
+      <Position>12</Position>
+      <Comment>游戏RPC ID</Comment>
+      <DataType>varchar(32)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="69" parent="11" name="game_rpc_addr">
+      <Position>13</Position>
+      <Comment>游戏RPC 地址</Comment>
+      <DataType>varchar(128)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="70" parent="11" name="extend_type">
+      <Position>14</Position>
+      <Comment>抽水类型0、游戏抽水 1、表示jackpot抽水 2、游戏其他数据</Comment>
+      <DataType>tinyint(4)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="71" parent="11" name="state">
+      <Position>15</Position>
+      <Comment>状态1表示正常，3表示删除</Comment>
+      <DataType>tinyint(4)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;1&apos;</DefaultExpression>
+    </column>
+    <column id="72" parent="11" name="operate_id">
+      <Position>16</Position>
+      <Comment>操作用户</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="73" parent="11" name="create_time">
+      <Position>17</Position>
+      <Comment>创建时间</Comment>
+      <DataType>datetime|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="74" parent="11" name="update_time">
+      <Position>18</Position>
+      <Comment>更新时间</Comment>
+      <DataType>datetime|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="75" parent="11" name="sort_num">
+      <Position>19</Position>
+      <DataType>smallint(6)|0</DataType>
+    </column>
+    <column id="76" parent="11" name="support_lang">
+      <Position>20</Position>
+      <Comment>支持语言：zh 中文；en 英语；</Comment>
+      <DataType>varchar(30)|0</DataType>
+      <DefaultExpression>&apos;zh&apos;</DefaultExpression>
+    </column>
+    <column id="77" parent="11" name="support_currency">
+      <Position>21</Position>
+      <DataType>varchar(256)|0</DataType>
+    </column>
+    <column id="78" parent="11" name="switch_keys">
+      <Position>22</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <index id="79" parent="11" name="game_idx">
+      <ColNames>game_id
+state</ColNames>
+    </index>
+    <key id="80" parent="11" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>record_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="81" parent="12" name="report_id">
+      <Position>1</Position>
+      <Comment>报表id</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="82" parent="12" name="sn">
+      <Position>2</Position>
+      <Comment>厅编号</Comment>
+      <DataType>char(4)|0</DataType>
+    </column>
+    <column id="83" parent="12" name="user_id">
+      <Position>3</Position>
+      <Comment>用户id</Comment>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="84" parent="12" name="login_id">
+      <Position>4</Position>
+      <Comment>用户登录名称</Comment>
+      <DataType>varchar(128)|0</DataType>
+    </column>
+    <column id="85" parent="12" name="action_id">
+      <Position>5</Position>
+      <Comment>统计对应的活动配置ID</Comment>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="86" parent="12" name="amount">
+      <Position>6</Position>
+      <Comment>发放金额</Comment>
+      <DataType>decimal(12,2)|0</DataType>
+      <DefaultExpression>&apos;0.00&apos;</DefaultExpression>
+    </column>
+    <column id="87" parent="12" name="status">
+      <Position>7</Position>
+      <Comment>记录状态</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="88" parent="12" name="create_time">
+      <Position>8</Position>
+      <Comment>记录创建时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="89" parent="12" name="moidfy_time">
+      <Position>9</Position>
+      <Comment>记录修改时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <index id="90" parent="12" name="idx_sn_create_time">
+      <ColNames>sn
+create_time</ColNames>
+    </index>
+    <index id="91" parent="12" name="idx_sn_user_id">
+      <ColNames>sn
+action_id
+user_id</ColNames>
+    </index>
+    <key id="92" parent="12" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>report_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="93" parent="13" name="report_id">
+      <Position>1</Position>
+      <Comment>报表id</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="94" parent="13" name="sn">
+      <Position>2</Position>
+      <Comment>厅编号</Comment>
+      <DataType>char(4)|0</DataType>
+    </column>
+    <column id="95" parent="13" name="user_id">
+      <Position>3</Position>
+      <Comment>用户id</Comment>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="96" parent="13" name="login_id">
+      <Position>4</Position>
+      <Comment>用户登录名称</Comment>
+      <DataType>varchar(128)|0</DataType>
+    </column>
+    <column id="97" parent="13" name="action_id">
+      <Position>5</Position>
+      <Comment>统计对应的活动配置ID</Comment>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="98" parent="13" name="amount">
+      <Position>6</Position>
+      <Comment>发放金额</Comment>
+      <DataType>decimal(12,2)|0</DataType>
+      <DefaultExpression>&apos;0.00&apos;</DefaultExpression>
+    </column>
+    <column id="99" parent="13" name="status">
+      <Position>7</Position>
+      <Comment>记录状态</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="100" parent="13" name="integral_num">
+      <Position>8</Position>
+      <Comment>积分</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="101" parent="13" name="create_time">
+      <Position>9</Position>
+      <Comment>记录创建时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="102" parent="13" name="moidfy_time">
+      <Position>10</Position>
+      <Comment>记录修改时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="103" parent="13" name="win_condition">
+      <Position>11</Position>
+      <DataType>varchar(1000)|0</DataType>
+    </column>
+    <column id="104" parent="13" name="sum_day">
+      <Position>12</Position>
+      <Comment>统计时间</Comment>
+      <DataType>char(10)|0</DataType>
+    </column>
+    <column id="105" parent="13" name="sum_day_bj">
+      <Position>13</Position>
+      <Comment>统计时间</Comment>
+      <DataType>char(10)|0</DataType>
+    </column>
+    <index id="106" parent="13" name="idx_sn_user_id">
+      <ColNames>sn
+action_id
+user_id</ColNames>
+    </index>
+    <key id="107" parent="13" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>report_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="108" parent="14" name="report_id">
+      <Position>1</Position>
+      <Comment>报表id</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="109" parent="14" name="sn">
+      <Position>2</Position>
+      <Comment>厅编号</Comment>
+      <DataType>char(4)|0</DataType>
+    </column>
+    <column id="110" parent="14" name="user_id">
+      <Position>3</Position>
+      <Comment>用户id</Comment>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="111" parent="14" name="login_id">
+      <Position>4</Position>
+      <Comment>用户登录名称</Comment>
+      <DataType>varchar(128)|0</DataType>
+    </column>
+    <column id="112" parent="14" name="action_id">
+      <Position>5</Position>
+      <Comment>统计对应的活动配置ID</Comment>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="113" parent="14" name="amount">
+      <Position>6</Position>
+      <Comment>发放金额</Comment>
+      <DataType>decimal(12,2)|0</DataType>
+      <DefaultExpression>&apos;0.00&apos;</DefaultExpression>
+    </column>
+    <column id="114" parent="14" name="status">
+      <Position>7</Position>
+      <Comment>记录状态</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="115" parent="14" name="create_time">
+      <Position>8</Position>
+      <Comment>记录创建时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="116" parent="14" name="moidfy_time">
+      <Position>9</Position>
+      <Comment>记录修改时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="117" parent="14" name="win_condition">
+      <Position>10</Position>
+      <DataType>varchar(1000)|0</DataType>
+    </column>
+    <column id="118" parent="14" name="sum_day">
+      <Position>11</Position>
+      <Comment>统计时间</Comment>
+      <DataType>char(10)|0</DataType>
+    </column>
+    <column id="119" parent="14" name="sum_day_bj">
+      <Position>12</Position>
+      <Comment>统计时间</Comment>
+      <DataType>char(10)|0</DataType>
+    </column>
+    <index id="120" parent="14" name="idx_sn_create_time">
+      <ColNames>sn
+create_time</ColNames>
+    </index>
+    <index id="121" parent="14" name="idx_sn_sum_day">
+      <ColNames>sn
+action_id
+sum_day</ColNames>
+    </index>
+    <index id="122" parent="14" name="idx_sn_sum_day_bj">
+      <ColNames>sn
+action_id
+sum_day_bj</ColNames>
+    </index>
+    <index id="123" parent="14" name="idx_sn_user_id">
+      <ColNames>sn
+action_id
+user_id</ColNames>
+    </index>
+    <key id="124" parent="14" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>report_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="125" parent="15" name="report_id">
+      <Position>1</Position>
+      <Comment>报表id</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="126" parent="15" name="sn">
+      <Position>2</Position>
+      <Comment>厅编号</Comment>
+      <DataType>char(4)|0</DataType>
+    </column>
+    <column id="127" parent="15" name="user_id">
+      <Position>3</Position>
+      <Comment>用户id</Comment>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="128" parent="15" name="login_id">
+      <Position>4</Position>
+      <Comment>用户登录名称</Comment>
+      <DataType>varchar(128)|0</DataType>
+    </column>
+    <column id="129" parent="15" name="action_id">
+      <Position>5</Position>
+      <Comment>统计对应的活动配置ID</Comment>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="130" parent="15" name="amount">
+      <Position>6</Position>
+      <Comment>发放金额</Comment>
+      <DataType>decimal(12,2)|0</DataType>
+      <DefaultExpression>&apos;0.00&apos;</DefaultExpression>
+    </column>
+    <column id="131" parent="15" name="status">
+      <Position>7</Position>
+      <Comment>记录状态</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="132" parent="15" name="create_time">
+      <Position>8</Position>
+      <Comment>记录创建时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="133" parent="15" name="moidfy_time">
+      <Position>9</Position>
+      <Comment>记录修改时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="134" parent="15" name="win_condition">
+      <Position>10</Position>
+      <DataType>varchar(1000)|0</DataType>
+    </column>
+    <column id="135" parent="15" name="rule_type">
+      <Position>11</Position>
+      <Comment>规则类型 1、有效投注 2、输赢</Comment>
+      <DataType>varchar(16)|0</DataType>
+    </column>
+    <column id="136" parent="15" name="sum_day">
+      <Position>12</Position>
+      <Comment>统计时间</Comment>
+      <DataType>char(10)|0</DataType>
+    </column>
+    <column id="137" parent="15" name="sum_day_bj">
+      <Position>13</Position>
+      <Comment>统计时间</Comment>
+      <DataType>char(10)|0</DataType>
+    </column>
+    <column id="138" parent="15" name="task_id">
+      <Position>14</Position>
+      <Comment>奖励人数表的编号</Comment>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <index id="139" parent="15" name="idx_sn_action_id">
+      <ColNames>sn
+action_id</ColNames>
+    </index>
+    <key id="140" parent="15" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>report_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="141" parent="16" name="id">
+      <Position>1</Position>
+      <Comment>编号</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="142" parent="16" name="action_id">
+      <Position>2</Position>
+      <Comment>活动id</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="143" parent="16" name="sn">
+      <Position>3</Position>
+      <Comment>厅主id</Comment>
+      <DataType>char(4)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="144" parent="16" name="user_id">
+      <Position>4</Position>
+      <Comment>用户id</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="145" parent="16" name="login_id">
+      <Position>5</Position>
+      <Comment>登录id</Comment>
+      <DataType>varchar(128)|0</DataType>
+    </column>
+    <column id="146" parent="16" name="layer_id">
+      <Position>6</Position>
+      <Comment>层级id</Comment>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="147" parent="16" name="config_valid_bet">
+      <Position>7</Position>
+      <Comment>代理id</Comment>
+      <DataType>decimal(16,4)|0</DataType>
+    </column>
+    <column id="148" parent="16" name="config_win_amount">
+      <Position>8</Position>
+      <Comment>代理登录id</Comment>
+      <DataType>decimal(16,4)|0</DataType>
+    </column>
+    <column id="149" parent="16" name="valid_bet">
+      <Position>9</Position>
+      <Comment>有效投注</Comment>
+      <DataType>decimal(16,4)|0</DataType>
+    </column>
+    <column id="150" parent="16" name="win_amount">
+      <Position>10</Position>
+      <Comment>输赢</Comment>
+      <DataType>decimal(16,4)|0</DataType>
+    </column>
+    <column id="151" parent="16" name="rule_type">
+      <Position>11</Position>
+      <Comment>规则类型 1、有效投注 2、输赢 3、充值</Comment>
+      <DataType>varchar(16)|0</DataType>
+    </column>
+    <column id="152" parent="16" name="sum_day">
+      <Position>12</Position>
+      <Comment>时间</Comment>
+      <DataType>char(10)|0</DataType>
+    </column>
+    <column id="153" parent="16" name="create_time">
+      <Position>13</Position>
+      <Comment>创建时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="154" parent="16" name="update_time">
+      <Position>14</Position>
+      <Comment>修改时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="155" parent="16" name="award_amount">
+      <Position>15</Position>
+      <Comment>奖励金额</Comment>
+      <DataType>decimal(16,2)|0</DataType>
+    </column>
+    <column id="156" parent="16" name="status">
+      <Position>16</Position>
+      <Comment>0 未完成 1、未领取 2、已领取</Comment>
+      <DataType>int(255)|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="157" parent="16" name="game_id">
+      <Position>17</Position>
+      <Comment>游戏id</Comment>
+      <DataType>varchar(1024)|0</DataType>
+    </column>
+    <column id="158" parent="16" name="charge_amount">
+      <Position>18</Position>
+      <Comment>日存款总额</Comment>
+      <DataType>decimal(16,4)|0</DataType>
+      <DefaultExpression>&apos;0.0000&apos;</DefaultExpression>
+    </column>
+    <column id="159" parent="16" name="config_charge_amount">
+      <Position>19</Position>
+      <Comment>日存款总额</Comment>
+      <DataType>decimal(16,4)|0</DataType>
+      <DefaultExpression>&apos;0.0000&apos;</DefaultExpression>
+    </column>
+    <index id="160" parent="16" name="idx_sn_actionId_sumday">
+      <ColNames>sn
+sum_day
+action_id</ColNames>
+    </index>
+    <index id="161" parent="16" name="idx_sn_actionid_user_layer">
+      <ColNames>sn
+user_id
+sum_day
+layer_id
+action_id</ColNames>
+    </index>
+    <index id="162" parent="16" name="idx_sn_update_time">
+      <ColNames>sn
+update_time</ColNames>
+    </index>
+    <key id="163" parent="16" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="164" parent="17" name="group_id">
+      <Position>1</Position>
+      <Comment>主键,分组ID</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="165" parent="17" name="sn">
+      <Position>2</Position>
+      <Comment>厅编码</Comment>
+      <DataType>char(4)|0</DataType>
+    </column>
+    <column id="166" parent="17" name="group_name">
+      <Position>3</Position>
+      <Comment>分组名称</Comment>
+      <DataType>varchar(128)|0</DataType>
+    </column>
+    <column id="167" parent="17" name="group_name_i18n">
+      <Position>4</Position>
+      <Comment>多语言分组名{&quot;zh&quot;:&quot;&quot;,&quot;en&quot;:&quot;&quot;}</Comment>
+      <DataType>varchar(1000)|0</DataType>
+    </column>
+    <column id="168" parent="17" name="group_order_num">
+      <Position>5</Position>
+      <Comment>分组排序号</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="169" parent="17" name="update_time">
+      <Position>6</Position>
+      <Comment>修改时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="170" parent="17" name="operator">
+      <Position>7</Position>
+      <Comment>修改人</Comment>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="171" parent="17" name="state">
+      <Position>8</Position>
+      <Comment>正常:1, 删除:2</Comment>
+      <DataType>char(1)|0</DataType>
+    </column>
+    <column id="172" parent="17" name="pic_path">
+      <Position>9</Position>
+      <Comment>图标地址</Comment>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="173" parent="17" name="auth_template_ids">
+      <Position>10</Position>
+      <Comment>子站</Comment>
+      <DataType>varchar(200)|0</DataType>
+      <DefaultExpression>&apos;-1&apos;</DefaultExpression>
+    </column>
+    <index id="174" parent="17" name="idx_sn">
+      <ColNames>sn</ColNames>
+    </index>
+    <key id="175" parent="17" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>group_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="176" parent="18" name="report_id">
+      <Position>1</Position>
+      <Comment>报表id</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="177" parent="18" name="sn">
+      <Position>2</Position>
+      <Comment>厅编号</Comment>
+      <DataType>char(4)|0</DataType>
+    </column>
+    <column id="178" parent="18" name="user_id">
+      <Position>3</Position>
+      <Comment>用户id</Comment>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="179" parent="18" name="login_id">
+      <Position>4</Position>
+      <Comment>用户登录名称</Comment>
+      <DataType>varchar(128)|0</DataType>
+    </column>
+    <column id="180" parent="18" name="action_id">
+      <Position>5</Position>
+      <Comment>统计对应的活动配置ID</Comment>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="181" parent="18" name="amount">
+      <Position>6</Position>
+      <Comment>发放金额</Comment>
+      <DataType>decimal(12,2)|0</DataType>
+      <DefaultExpression>&apos;0.00&apos;</DefaultExpression>
+    </column>
+    <column id="182" parent="18" name="status">
+      <Position>7</Position>
+      <Comment>记录状态</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="183" parent="18" name="create_time">
+      <Position>8</Position>
+      <Comment>记录创建时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="184" parent="18" name="moidfy_time">
+      <Position>9</Position>
+      <Comment>记录修改时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="185" parent="18" name="item_id">
+      <Position>10</Position>
+      <Comment>item_id</Comment>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <index id="186" parent="18" name="idx_sn_user_id">
+      <ColNames>sn
+action_id
+user_id</ColNames>
+    </index>
+    <key id="187" parent="18" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>report_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="188" parent="19" name="action_id">
+      <Position>1</Position>
+      <Comment>活动id</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="189" parent="19" name="sn">
+      <Position>2</Position>
+      <Comment>厅主id</Comment>
+      <DataType>char(4)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="190" parent="19" name="user_id">
+      <Position>3</Position>
+      <Comment>用户id</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="191" parent="19" name="login_id">
+      <Position>4</Position>
+      <Comment>登录id</Comment>
+      <DataType>varchar(128)|0</DataType>
+    </column>
+    <column id="192" parent="19" name="agent_id">
+      <Position>5</Position>
+      <Comment>代理id</Comment>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="193" parent="19" name="agent_login_id">
+      <Position>6</Position>
+      <Comment>代理登录id</Comment>
+      <DataType>varchar(128)|0</DataType>
+    </column>
+    <column id="194" parent="19" name="reg_time">
+      <Position>7</Position>
+      <Comment>注册时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="195" parent="19" name="total_charge_amount">
+      <Position>8</Position>
+      <Comment>总充值金额</Comment>
+      <DataType>decimal(16,4)|0</DataType>
+      <DefaultExpression>&apos;0.0000&apos;</DefaultExpression>
+    </column>
+    <column id="196" parent="19" name="total_valid_bet">
+      <Position>9</Position>
+      <Comment>总投注金额</Comment>
+      <DataType>decimal(16,4)|0</DataType>
+      <DefaultExpression>&apos;0.0000&apos;</DefaultExpression>
+    </column>
+    <column id="197" parent="19" name="curr_valid_bet">
+      <Position>10</Position>
+      <Comment>当日投注金额</Comment>
+      <DataType>decimal(16,4)|0</DataType>
+      <DefaultExpression>&apos;0.0000&apos;</DefaultExpression>
+    </column>
+    <column id="198" parent="19" name="hist_valid_bet">
+      <Position>11</Position>
+      <Comment>历史打码量总额</Comment>
+      <DataType>decimal(16,4)|0</DataType>
+      <DefaultExpression>&apos;0.0000&apos;</DefaultExpression>
+    </column>
+    <column id="199" parent="19" name="hist_date">
+      <Position>12</Position>
+      <Comment>历史更新时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="200" parent="19" name="sum_day">
+      <Position>13</Position>
+      <Comment>统计时间</Comment>
+      <DataType>char(10)|0</DataType>
+    </column>
+    <column id="201" parent="19" name="finish_time">
+      <Position>14</Position>
+      <Comment>达标时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="202" parent="19" name="data_stts">
+      <Position>15</Position>
+      <Comment>数据状态(1、正常 2、失效)</Comment>
+      <DataType>int(11)|0</DataType>
+      <DefaultExpression>&apos;1&apos;</DefaultExpression>
+    </column>
+    <column id="203" parent="19" name="bus_stts">
+      <Position>16</Position>
+      <Comment>业务状态(0、未达标 1、已达标)</Comment>
+      <DataType>int(11)|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="204" parent="19" name="win_condition">
+      <Position>17</Position>
+      <DataType>varchar(1000)|0</DataType>
+    </column>
+    <column id="205" parent="19" name="agent_path">
+      <Position>18</Position>
+      <Comment>代理路径</Comment>
+      <DataType>varchar(600)|0</DataType>
+    </column>
+    <column id="206" parent="19" name="update_time">
+      <Position>19</Position>
+      <Comment>修改时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="207" parent="19" name="agent_code">
+      <Position>20</Position>
+      <Comment>推广码</Comment>
+      <DataType>varchar(16)|0</DataType>
+    </column>
+    <index id="208" parent="19" name="idx_sn_id_sttts">
+      <ColNames>sn
+action_id
+data_stts
+bus_stts
+agent_code</ColNames>
+    </index>
+    <index id="209" parent="19" name="id_sn_id_agent_stts">
+      <ColNames>sn
+action_id
+agent_id
+data_stts</ColNames>
+    </index>
+    <key id="210" parent="19" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>sn
+action_id
+user_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="211" parent="20" name="report_id">
+      <Position>1</Position>
+      <Comment>报表id</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="212" parent="20" name="sn">
+      <Position>2</Position>
+      <Comment>厅编号</Comment>
+      <DataType>char(4)|0</DataType>
+    </column>
+    <column id="213" parent="20" name="user_id">
+      <Position>3</Position>
+      <Comment>用户id</Comment>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="214" parent="20" name="login_id">
+      <Position>4</Position>
+      <Comment>用户登录名称</Comment>
+      <DataType>varchar(128)|0</DataType>
+    </column>
+    <column id="215" parent="20" name="action_id">
+      <Position>5</Position>
+      <Comment>统计对应的活动配置ID</Comment>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="216" parent="20" name="amount">
+      <Position>6</Position>
+      <Comment>发放金额</Comment>
+      <DataType>decimal(12,2)|0</DataType>
+      <DefaultExpression>&apos;0.00&apos;</DefaultExpression>
+    </column>
+    <column id="217" parent="20" name="win_condition">
+      <Position>7</Position>
+      <DataType>varchar(1000)|0</DataType>
+    </column>
+    <column id="218" parent="20" name="sum_day">
+      <Position>8</Position>
+      <Comment>统计时间</Comment>
+      <DataType>char(10)|0</DataType>
+    </column>
+    <column id="219" parent="20" name="sum_day_bj">
+      <Position>9</Position>
+      <Comment>统计时间</Comment>
+      <DataType>char(10)|0</DataType>
+    </column>
+    <column id="220" parent="20" name="status">
+      <Position>10</Position>
+      <Comment>记录状态</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="221" parent="20" name="create_time">
+      <Position>11</Position>
+      <Comment>记录创建时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="222" parent="20" name="moidfy_time">
+      <Position>12</Position>
+      <Comment>记录修改时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <index id="223" parent="20" name="idx_sn_user_id">
+      <ColNames>sn
+action_id
+user_id</ColNames>
+    </index>
+    <key id="224" parent="20" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>report_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="225" parent="21" name="action_id">
+      <Position>1</Position>
+      <Comment>活动ID</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="226" parent="21" name="sn">
+      <Position>2</Position>
+      <Comment>厅编码</Comment>
+      <DataType>char(4)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="227" parent="21" name="user_login_id">
+      <Position>3</Position>
+      <Comment>操作人</Comment>
+      <DataType>varchar(128)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="228" parent="21" name="user_type">
+      <Position>4</Position>
+      <Comment>1:普通用户,2:陪玩用户</Comment>
+      <DataType>char(1)|0</DataType>
+    </column>
+    <column id="229" parent="21" name="update_time">
+      <Position>5</Position>
+      <Comment>修改时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="230" parent="21" name="state">
+      <Position>6</Position>
+      <Comment>导入失败0,导入成功1</Comment>
+      <DataType>char(1)|0</DataType>
+    </column>
+    <column id="231" parent="21" name="grant_state">
+      <Position>7</Position>
+      <Comment>0：未领取,1已领取</Comment>
+      <DataType>char(1)|0</DataType>
+    </column>
+    <column id="232" parent="21" name="amount">
+      <Position>8</Position>
+      <Comment>红包金额</Comment>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="233" parent="21" name="audit">
+      <Position>9</Position>
+      <Comment>稽核倍数</Comment>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="234" parent="21" name="description">
+      <Position>10</Position>
+      <Comment>描述</Comment>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="235" parent="21" name="receive_time">
+      <Position>11</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="236" parent="21" name="error_msg">
+      <Position>12</Position>
+      <Comment>异常状态原因</Comment>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <index id="237" parent="21" name="sn_action_login_id">
+      <ColNames>sn
+user_login_id
+action_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="238" parent="21" name="sn_action_login_id">
+      <ColNames>sn
+user_login_id
+action_id</ColNames>
+      <UnderlyingIndexName>sn_action_login_id</UnderlyingIndexName>
+    </key>
+    <column id="239" parent="22" name="report_id">
+      <Position>1</Position>
+      <Comment>报表id</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="240" parent="22" name="sn">
+      <Position>2</Position>
+      <Comment>厅编号</Comment>
+      <DataType>char(4)|0</DataType>
+    </column>
+    <column id="241" parent="22" name="user_id">
+      <Position>3</Position>
+      <Comment>用户id</Comment>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="242" parent="22" name="login_id">
+      <Position>4</Position>
+      <Comment>用户登录名称</Comment>
+      <DataType>varchar(128)|0</DataType>
+    </column>
+    <column id="243" parent="22" name="action_id">
+      <Position>5</Position>
+      <Comment>统计对应的活动配置ID</Comment>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="244" parent="22" name="amount">
+      <Position>6</Position>
+      <Comment>发放金额</Comment>
+      <DataType>decimal(12,2)|0</DataType>
+      <DefaultExpression>&apos;0.00&apos;</DefaultExpression>
+    </column>
+    <column id="245" parent="22" name="status">
+      <Position>7</Position>
+      <Comment>记录状态</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="246" parent="22" name="create_time">
+      <Position>8</Position>
+      <Comment>记录创建时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="247" parent="22" name="moidfy_time">
+      <Position>9</Position>
+      <Comment>记录修改时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <index id="248" parent="22" name="idx_sn_user_id">
+      <ColNames>sn
+user_id
+action_id</ColNames>
+    </index>
+    <index id="249" parent="22" name="idx_time_user">
+      <ColNames>sn
+create_time
+user_id
+status</ColNames>
+    </index>
+    <key id="250" parent="22" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>report_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="251" parent="23" name="id">
+      <Position>1</Position>
+      <Comment>id</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="252" parent="23" name="action_id">
+      <Position>2</Position>
+      <Comment>活动id</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="253" parent="23" name="sn">
+      <Position>3</Position>
+      <Comment>厅编号</Comment>
+      <DataType>char(4)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="254" parent="23" name="user_id">
+      <Position>4</Position>
+      <Comment>用户id</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="255" parent="23" name="login_id">
+      <Position>5</Position>
+      <Comment>用户登录id</Comment>
+      <DataType>varchar(128)|0</DataType>
+    </column>
+    <column id="256" parent="23" name="agent_id">
+      <Position>6</Position>
+      <Comment>用户id</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="257" parent="23" name="agent_login_id">
+      <Position>7</Position>
+      <Comment>代理登录id</Comment>
+      <DataType>varchar(128)|0</DataType>
+    </column>
+    <column id="258" parent="23" name="item_id">
+      <Position>8</Position>
+      <Comment>抽奖详情id</Comment>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="259" parent="23" name="report_id">
+      <Position>9</Position>
+      <Comment>活动报表id</Comment>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="260" parent="23" name="prize_type">
+      <Position>10</Position>
+      <Comment>奖品类型(1、谢谢参与 2、再来一次 3、奖金 4、奖品)</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="261" parent="23" name="amount">
+      <Position>11</Position>
+      <Comment>奖品金额</Comment>
+      <DataType>decimal(16,2)|0</DataType>
+      <DefaultExpression>&apos;0.00&apos;</DefaultExpression>
+    </column>
+    <column id="262" parent="23" name="audit_bet_amount">
+      <Position>12</Position>
+      <Comment>稽核倍数</Comment>
+      <DataType>decimal(16,2)|0</DataType>
+      <DefaultExpression>&apos;0.00&apos;</DefaultExpression>
+    </column>
+    <column id="263" parent="23" name="status">
+      <Position>13</Position>
+      <Comment>状态</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="264" parent="23" name="operator_id">
+      <Position>14</Position>
+      <Comment>操作者</Comment>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="265" parent="23" name="create_time">
+      <Position>15</Position>
+      <Comment>抽奖时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="266" parent="23" name="update_time">
+      <Position>16</Position>
+      <Comment>修改时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="267" parent="23" name="ip_addr">
+      <Position>17</Position>
+      <Comment>ip地址</Comment>
+      <DataType>varchar(128)|0</DataType>
+    </column>
+    <column id="268" parent="23" name="prize_level">
+      <Position>18</Position>
+      <Comment>奖项级别</Comment>
+      <DataType>char(8)|0</DataType>
+    </column>
+    <column id="269" parent="23" name="prize_name">
+      <Position>19</Position>
+      <Comment>奖项名称</Comment>
+      <DataType>char(8)|0</DataType>
+    </column>
+    <index id="270" parent="23" name="idx_action_user">
+      <ColNames>sn
+action_id
+user_id</ColNames>
+    </index>
+    <index id="271" parent="23" name="idx_create_time">
+      <ColNames>sn
+create_time
+login_id</ColNames>
+    </index>
+    <key id="272" parent="23" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="273" parent="24" name="action_id">
+      <Position>1</Position>
+      <Comment>活动id</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="274" parent="24" name="sn">
+      <Position>2</Position>
+      <Comment>厅编号</Comment>
+      <DataType>char(4)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="275" parent="24" name="user_id">
+      <Position>3</Position>
+      <Comment>用户id</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="276" parent="24" name="sum_day_give">
+      <Position>4</Position>
+      <Comment>每日赠送的时间</Comment>
+      <DataType>char(10)|0</DataType>
+    </column>
+    <column id="277" parent="24" name="create_time">
+      <Position>5</Position>
+      <Comment>开始时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="278" parent="24" name="update_time">
+      <Position>6</Position>
+      <Comment>修改时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="279" parent="24" name="give_type">
+      <Position>7</Position>
+      <Comment>赠送类型(1、每日 2、全部)</Comment>
+      <DataType>int(11)|0</DataType>
+      <DefaultExpression>&apos;1&apos;</DefaultExpression>
+    </column>
+    <column id="280" parent="24" name="give_num">
+      <Position>8</Position>
+      <Comment>赠送条数</Comment>
+      <DataType>int(11)|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="281" parent="24" name="prize_num">
+      <Position>9</Position>
+      <Comment>抽奖赠送</Comment>
+      <DataType>int(11)|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="282" parent="24" name="activity_num">
+      <Position>10</Position>
+      <Comment>满足条件赠送</Comment>
+      <DataType>int(11)|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="283" parent="24" name="activity_items">
+      <Position>11</Position>
+      <Comment>赠送编号使用,分割</Comment>
+      <DataType>varchar(32)|0</DataType>
+    </column>
+    <column id="284" parent="24" name="total_num">
+      <Position>12</Position>
+      <Comment>总数量</Comment>
+      <DataType>int(11)|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="285" parent="24" name="total_use_num">
+      <Position>13</Position>
+      <Comment>总使用数量</Comment>
+      <DataType>int(11)|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="286" parent="24" name="sum_day_activity">
+      <Position>14</Position>
+      <Comment>充值打码达标赠送的时间</Comment>
+      <DataType>char(10)|0</DataType>
+    </column>
+    <key id="287" parent="24" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>sn
+action_id
+user_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="288" parent="25" name="sn">
+      <Position>1</Position>
+      <DataType>char(4)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="289" parent="25" name="agent_code">
+      <Position>2</Position>
+      <DataType>varchar(64)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="290" parent="25" name="state">
+      <Position>3</Position>
+      <DataType>tinyint(4)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="291" parent="25" name="hidden_seconds">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="292" parent="25" name="settings">
+      <Position>5</Position>
+      <DataType>text|0</DataType>
+    </column>
+    <column id="293" parent="25" name="create_time">
+      <Position>6</Position>
+      <DataType>datetime|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="294" parent="25" name="update_time">
+      <Position>7</Position>
+      <DataType>datetime|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="295" parent="25" name="operate_id">
+      <Position>8</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="296" parent="25" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>sn
+agent_code</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="297" parent="26" name="id">
+      <Position>1</Position>
+      <Comment>主键</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="298" parent="26" name="sn">
+      <Position>2</Position>
+      <Comment>厅编码</Comment>
+      <DataType>char(4)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="299" parent="26" name="bank_draw_order_set">
+      <Position>3</Position>
+      <Comment>出款银行顺序设定json</Comment>
+      <DataType>text|0</DataType>
+    </column>
+    <column id="300" parent="26" name="update_time">
+      <Position>4</Position>
+      <Comment>操作时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="301" parent="26" name="operator">
+      <Position>5</Position>
+      <Comment>操作人</Comment>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <index id="302" parent="26" name="sn">
+      <ColNames>sn</ColNames>
+    </index>
+    <key id="303" parent="26" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="304" parent="27" name="sn">
+      <Position>1</Position>
+      <DataType>char(4)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="305" parent="27" name="temp_id">
+      <Position>2</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="306" parent="27" name="kefu_link">
+      <Position>3</Position>
+      <DataType>varchar(768)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="307" parent="27" name="kefu_json">
+      <Position>4</Position>
+      <DataType>varchar(2000)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="308" parent="27" name="website_title">
+      <Position>5</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="309" parent="27" name="state">
+      <Position>6</Position>
+      <Comment>1 正常，2停用，3删除</Comment>
+      <DataType>tinyint(4)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;1&apos;</DefaultExpression>
+    </column>
+    <column id="310" parent="27" name="create_time">
+      <Position>7</Position>
+      <DataType>datetime|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="311" parent="27" name="update_time">
+      <Position>8</Position>
+      <DataType>datetime|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="312" parent="27" name="operate_id">
+      <Position>9</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="313" parent="27" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>sn
+temp_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="314" parent="28" name="sn">
+      <Position>1</Position>
+      <Comment>厅编码</Comment>
+      <DataType>char(4)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="315" parent="28" name="game_order_json">
+      <Position>2</Position>
+      <Comment>厅游戏栏目顺序设置</Comment>
+      <DataType>text|0</DataType>
+    </column>
+    <column id="316" parent="28" name="update_time">
+      <Position>3</Position>
+      <Comment>更新时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="317" parent="28" name="operator">
+      <Position>4</Position>
+      <Comment>操作人ID</Comment>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <key id="318" parent="28" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>sn</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="319" parent="29" name="sn">
+      <Position>1</Position>
+      <DataType>char(4)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="320" parent="29" name="config_key">
+      <Position>2</Position>
+      <Comment>游戏代码</Comment>
+      <DataType>varchar(128)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="321" parent="29" name="config_name">
+      <Position>3</Position>
+      <Comment>游戏名称</Comment>
+      <DataType>varchar(25)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="322" parent="29" name="description">
+      <Position>4</Position>
+      <Comment>描述</Comment>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="323" parent="29" name="cms_state">
+      <Position>5</Position>
+      <Comment>0 停用/1启用/3删除</Comment>
+      <DataType>tinyint(4)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="324" parent="29" name="state">
+      <Position>6</Position>
+      <Comment>0 停用/1启用/3删除</Comment>
+      <DataType>tinyint(4)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="325" parent="29" name="create_time">
+      <Position>7</Position>
+      <Comment>创建时间</Comment>
+      <DataType>datetime|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="326" parent="29" name="update_time">
+      <Position>8</Position>
+      <DataType>datetime|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="327" parent="29" name="operator">
+      <Position>9</Position>
+      <Comment>修改用户</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="328" parent="29" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>sn
+config_key</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="329" parent="30" name="sn">
+      <Position>1</Position>
+      <DataType>char(4)|0</DataType>
+    </column>
+    <column id="330" parent="30" name="mobile">
+      <Position>2</Position>
+      <DataType>char(14)|0</DataType>
+    </column>
+    <column id="331" parent="30" name="update_time">
+      <Position>3</Position>
+      <Comment>修改时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="332" parent="30" name="state">
+      <Position>4</Position>
+      <Comment>导入状态,成功:1,失败:0</Comment>
+      <DataType>char(1)|0</DataType>
+    </column>
+    <column id="333" parent="30" name="grant_state">
+      <Position>5</Position>
+      <Comment>派发状态,默认未派发:0,派发成功:1,重复手机号:2派发失败:3</Comment>
+      <DataType>char(1)|0</DataType>
+    </column>
+    <index id="334" parent="30" name="idx_sn_phone">
+      <ColNames>sn
+mobile</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="335" parent="30" name="idx_sn_phone">
+      <ColNames>sn
+mobile</ColNames>
+      <UnderlyingIndexName>idx_sn_phone</UnderlyingIndexName>
+    </key>
+    <column id="336" parent="31" name="id">
+      <Position>1</Position>
+      <Comment>主键</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="337" parent="31" name="sn">
+      <Position>2</Position>
+      <Comment>厅编码</Comment>
+      <DataType>char(4)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="338" parent="31" name="type">
+      <Position>3</Position>
+      <Comment>所有手机号类型:1,指定手机号类型:2</Comment>
+      <DataType>char(1)|0</DataType>
+    </column>
+    <column id="339" parent="31" name="reward">
+      <Position>4</Position>
+      <Comment>优惠金额</Comment>
+      <DataType>decimal(20,4)|0</DataType>
+    </column>
+    <column id="340" parent="31" name="update_time">
+      <Position>5</Position>
+      <Comment>更新时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="341" parent="31" name="operator">
+      <Position>6</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="342" parent="31" name="state">
+      <Position>7</Position>
+      <DataType>char(1)|0</DataType>
+    </column>
+    <key id="343" parent="31" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="344" parent="32" name="sn">
+      <Position>1</Position>
+      <DataType>char(4)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="345" parent="32" name="mobile">
+      <Position>2</Position>
+      <DataType>bigint(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="346" parent="32" name="user_id">
+      <Position>3</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="347" parent="32" name="biz_id">
+      <Position>4</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="348" parent="32" name="amount">
+      <Position>5</Position>
+      <DataType>decimal(16,4)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="349" parent="32" name="create_time">
+      <Position>6</Position>
+      <DataType>datetime|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="350" parent="32" name="update_time">
+      <Position>7</Position>
+      <DataType>datetime|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="351" parent="32" name="idx_user">
+      <ColNames>sn
+user_id</ColNames>
+    </index>
+    <key id="352" parent="32" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>sn
+mobile</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="353" parent="33" name="event_id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="354" parent="33" name="sn">
+      <Position>2</Position>
+      <DataType>char(4)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="355" parent="33" name="module">
+      <Position>3</Position>
+      <Comment>模块</Comment>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="356" parent="33" name="sub_module">
+      <Position>4</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="357" parent="33" name="event_type">
+      <Position>5</Position>
+      <Comment>功能类型</Comment>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="358" parent="33" name="action_type">
+      <Position>6</Position>
+      <Comment>动作</Comment>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="359" parent="33" name="content">
+      <Position>7</Position>
+      <Comment>操作明细</Comment>
+      <DataType>text|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="360" parent="33" name="event_ip">
+      <Position>8</Position>
+      <DataType>varchar(128)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="361" parent="33" name="operator_id">
+      <Position>9</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="362" parent="33" name="create_time">
+      <Position>10</Position>
+      <DataType>datetime|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="363" parent="33" name="event_from">
+      <Position>11</Position>
+      <Comment>操作来源 0 厅后台；1总后台。</Comment>
+      <DataType>tinyint(4)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <index id="364" parent="33" name="idx_event_ip">
+      <ColNames>sn
+create_time
+event_ip
+module</ColNames>
+    </index>
+    <index id="365" parent="33" name="idx_event_module">
+      <ColNames>sn
+create_time
+module
+sub_module
+event_type</ColNames>
+    </index>
+    <index id="366" parent="33" name="idx_operator">
+      <ColNames>sn
+create_time
+operator_id
+module</ColNames>
+    </index>
+    <key id="367" parent="33" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>event_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="368" parent="34" name="sn">
+      <Position>1</Position>
+      <Comment>厅编码</Comment>
+      <DataType>char(4)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="369" parent="34" name="rank_type">
+      <Position>2</Position>
+      <Comment>1:财富,2：赢分</Comment>
+      <DataType>char(1)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="370" parent="34" name="login_id">
+      <Position>3</Position>
+      <Comment>账号</Comment>
+      <DataType>varchar(128)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="371" parent="34" name="rank_num">
+      <Position>4</Position>
+      <Comment>名次</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="372" parent="34" name="rank_value">
+      <Position>5</Position>
+      <Comment>名次对象,可以是赢分或是财富</Comment>
+      <DataType>decimal(18,4)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="373" parent="34" name="update_time">
+      <Position>6</Position>
+      <DataType>datetime|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="374" parent="34" name="operate_id">
+      <Position>7</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="375" parent="34" name="idx_sn_type">
+      <ColNames>sn
+rank_type</ColNames>
+    </index>
+    <column id="376" parent="35" name="sn">
+      <Position>1</Position>
+      <DataType>char(4)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="377" parent="35" name="root_agent_id">
+      <Position>2</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="378" parent="35" name="settings">
+      <Position>3</Position>
+      <DataType>text|0</DataType>
+    </column>
+    <column id="379" parent="35" name="update_time">
+      <Position>4</Position>
+      <DataType>datetime|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="380" parent="35" name="operator_id">
+      <Position>5</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="381" parent="35" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>sn
+root_agent_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="382" parent="36" name="auth_group_id">
+      <Position>1</Position>
+      <Comment>主键,分组ID</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="383" parent="36" name="sn">
+      <Position>2</Position>
+      <Comment>厅编码</Comment>
+      <DataType>char(4)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="384" parent="36" name="auth_group_name">
+      <Position>3</Position>
+      <Comment>分组授权名称</Comment>
+      <DataType>varchar(64)|0</DataType>
+    </column>
+    <column id="385" parent="36" name="auth_user_ids">
+      <Position>4</Position>
+      <Comment>子账号id</Comment>
+      <DataType>varchar(2500)|0</DataType>
+    </column>
+    <column id="386" parent="36" name="draw_amount">
+      <Position>5</Position>
+      <Comment>出款额度</Comment>
+      <DataType>decimal(12,2)|0</DataType>
+    </column>
+    <column id="387" parent="36" name="draw_total_amount">
+      <Position>6</Position>
+      <Comment>出款额度总计</Comment>
+      <DataType>decimal(12,2)|0</DataType>
+    </column>
+    <column id="388" parent="36" name="update_time">
+      <Position>7</Position>
+      <Comment>修改时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="389" parent="36" name="operator">
+      <Position>8</Position>
+      <Comment>修改人</Comment>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="390" parent="36" name="memo">
+      <Position>9</Position>
+      <DataType>varchar(128)|0</DataType>
+    </column>
+    <column id="391" parent="36" name="state">
+      <Position>10</Position>
+      <Comment>1 启用；2停用；3 删除</Comment>
+      <DataType>tinyint(4)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;1&apos;</DefaultExpression>
+    </column>
+    <index id="392" parent="36" name="idx_sn">
+      <ColNames>sn
+state</ColNames>
+    </index>
+    <key id="393" parent="36" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>auth_group_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="394" parent="37" name="sn">
+      <Position>1</Position>
+      <DataType>char(4)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="395" parent="37" name="user_id">
+      <Position>2</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="396" parent="37" name="config_key">
+      <Position>3</Position>
+      <Comment>游戏代码</Comment>
+      <DataType>varchar(128)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="397" parent="37" name="config_name">
+      <Position>4</Position>
+      <Comment>游戏名称</Comment>
+      <DataType>varchar(25)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="398" parent="37" name="description">
+      <Position>5</Position>
+      <Comment>描述</Comment>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="399" parent="37" name="state">
+      <Position>6</Position>
+      <Comment>0 停用/1启用/3删除</Comment>
+      <DataType>tinyint(4)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="400" parent="37" name="create_time">
+      <Position>7</Position>
+      <Comment>创建时间</Comment>
+      <DataType>datetime|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="401" parent="37" name="update_time">
+      <Position>8</Position>
+      <DataType>datetime|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="402" parent="37" name="operator">
+      <Position>9</Position>
+      <Comment>修改用户</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="403" parent="37" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>sn
+user_id
+config_key</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="404" parent="38" name="id">
+      <Position>1</Position>
+      <Comment>主键</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="405" parent="38" name="sn">
+      <Position>2</Position>
+      <Comment>厅编号</Comment>
+      <DataType>char(4)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="406" parent="38" name="p_id">
+      <Position>3</Position>
+      <Comment>导入的id</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="407" parent="38" name="agent_login_id">
+      <Position>4</Position>
+      <Comment>代理账号</Comment>
+      <DataType>varchar(128)|0</DataType>
+    </column>
+    <column id="408" parent="38" name="login_id">
+      <Position>5</Position>
+      <Comment>会员账号</Comment>
+      <DataType>varchar(128)|0</DataType>
+    </column>
+    <column id="409" parent="38" name="account_type">
+      <Position>6</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="410" parent="38" name="real_name">
+      <Position>7</Position>
+      <Comment>正式姓名</Comment>
+      <DataType>varchar(128)|0</DataType>
+    </column>
+    <column id="411" parent="38" name="user_pwd">
+      <Position>8</Position>
+      <Comment>用户密码</Comment>
+      <DataType>varchar(32)|0</DataType>
+    </column>
+    <column id="412" parent="38" name="user_mobile">
+      <Position>9</Position>
+      <Comment>手机号码</Comment>
+      <DataType>varchar(128)|0</DataType>
+    </column>
+    <column id="413" parent="38" name="user_qq">
+      <Position>10</Position>
+      <Comment>qq号码</Comment>
+      <DataType>varchar(64)|0</DataType>
+    </column>
+    <column id="414" parent="38" name="user_email">
+      <Position>11</Position>
+      <Comment>eamil</Comment>
+      <DataType>varchar(128)|0</DataType>
+    </column>
+    <column id="415" parent="38" name="bank_num">
+      <Position>12</Position>
+      <Comment>银行卡账号</Comment>
+      <DataType>varchar(128)|0</DataType>
+    </column>
+    <column id="416" parent="38" name="reg_time">
+      <Position>13</Position>
+      <Comment>注册时间</Comment>
+      <DataType>varchar(64)|0</DataType>
+    </column>
+    <column id="417" parent="38" name="agent_code">
+      <Position>14</Position>
+      <Comment>邀请码</Comment>
+      <DataType>varchar(32)|0</DataType>
+    </column>
+    <column id="418" parent="38" name="import_result">
+      <Position>15</Position>
+      <Comment>导入结果(1、成功 2、失败)</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="419" parent="38" name="import_err">
+      <Position>16</Position>
+      <Comment>错误结果</Comment>
+      <DataType>varchar(1024)|0</DataType>
+    </column>
+    <column id="420" parent="38" name="amount">
+      <Position>17</Position>
+      <Comment>充值金额</Comment>
+      <DataType>varchar(32)|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="421" parent="38" name="bank_name">
+      <Position>18</Position>
+      <Comment>银行卡名称</Comment>
+      <DataType>varchar(32)|0</DataType>
+    </column>
+    <column id="422" parent="38" name="wechat">
+      <Position>19</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="423" parent="38" name="layer_name">
+      <Position>20</Position>
+      <DataType>varchar(128)|0</DataType>
+    </column>
+    <column id="424" parent="38" name="memo">
+      <Position>21</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="425" parent="38" name="level">
+      <Position>22</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="426" parent="38" name="execute_result">
+      <Position>23</Position>
+      <Comment>执行结果(0、待执行；1、成功；2、失败)</Comment>
+      <DataType>tinyint(4)|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="427" parent="38" name="execute_err">
+      <Position>24</Position>
+      <DataType>varchar(1000)|0</DataType>
+    </column>
+    <index id="428" parent="38" name="idx_sn_execute">
+      <ColNames>sn
+p_id
+execute_result</ColNames>
+    </index>
+    <index id="429" parent="38" name="idx_sn_import">
+      <ColNames>sn
+p_id
+import_result</ColNames>
+    </index>
+    <index id="430" parent="38" name="idx_sn_pid">
+      <ColNames>sn
+p_id
+login_id</ColNames>
+    </index>
+    <key id="431" parent="38" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="432" parent="39" name="id">
+      <Position>1</Position>
+      <Comment>主键</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="433" parent="39" name="sn">
+      <Position>2</Position>
+      <Comment>厅编号</Comment>
+      <DataType>varchar(4)|0</DataType>
+    </column>
+    <column id="434" parent="39" name="up_file_name">
+      <Position>3</Position>
+      <Comment>文件名称</Comment>
+      <DataType>varchar(128)|0</DataType>
+    </column>
+    <column id="435" parent="39" name="start_time">
+      <Position>4</Position>
+      <Comment>导入开始时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="436" parent="39" name="end_time">
+      <Position>5</Position>
+      <Comment>导入结束时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="437" parent="39" name="has_finsh">
+      <Position>6</Position>
+      <Comment>是否导入成功(1、完成 0 未完成)</Comment>
+      <DataType>int(11)|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="438" parent="39" name="has_result">
+      <Position>7</Position>
+      <Comment>导入结果(1、导入成功 2、导入失败)</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="439" parent="39" name="has_err">
+      <Position>8</Position>
+      <Comment>是否有导入异常(1、没有异常 2、有异常)</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="440" parent="39" name="execute_result">
+      <Position>9</Position>
+      <Comment>执行结果(0、待执行；1、执行中；2、成功；3、失败)</Comment>
+      <DataType>tinyint(4)|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="441" parent="39" name="execute_err">
+      <Position>10</Position>
+      <Comment>是否有导入异常(0、没有异常 1、有异常)</Comment>
+      <DataType>tinyint(4)|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="442" parent="39" name="execute_time">
+      <Position>11</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="443" parent="39" name="state">
+      <Position>12</Position>
+      <Comment>1 正常；3 删除</Comment>
+      <DataType>tinyint(4)|0</DataType>
+      <DefaultExpression>&apos;1&apos;</DefaultExpression>
+    </column>
+    <column id="444" parent="39" name="execute_end_time">
+      <Position>13</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="445" parent="39" name="import_uid">
+      <Position>14</Position>
+      <Comment>导入用户ID</Comment>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="446" parent="39" name="execute_uid">
+      <Position>15</Position>
+      <Comment>执行用户ID</Comment>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="447" parent="39" name="operator">
+      <Position>16</Position>
+      <Comment>导入用户帐号</Comment>
+      <DataType>varchar(32)|0</DataType>
+    </column>
+    <index id="448" parent="39" name="idx_sn">
+      <ColNames>sn</ColNames>
+    </index>
+    <key id="449" parent="39" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="450" parent="40" name="id">
+      <Position>1</Position>
+      <Comment>主键</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="451" parent="40" name="sn">
+      <Position>2</Position>
+      <Comment>厅编码</Comment>
+      <DataType>char(4)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="452" parent="40" name="prize_target_type">
+      <Position>3</Position>
+      <Comment>虚拟账号:1</Comment>
+      <DataType>char(1)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="453" parent="40" name="virtual_account_rule">
+      <Position>4</Position>
+      <Comment>虚拟账号类型:规则编号</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="454" parent="40" name="prize_target">
+      <Position>5</Position>
+      <Comment>层级类型:多个层级ID&#xd;
+正式账号类型:账号ID&#xd;
+陪玩账号类型:陪玩账号ID&#xd;
+例如:[&quot;1&quot;,&quot;2&quot;]</Comment>
+      <DataType>varchar(1000)|0</DataType>
+    </column>
+    <column id="455" parent="40" name="min_prize_amount">
+      <Position>6</Position>
+      <Comment>中奖最小金额</Comment>
+      <DataType>decimal(20,4)|0</DataType>
+    </column>
+    <column id="456" parent="40" name="max_prize_amount">
+      <Position>7</Position>
+      <Comment>中奖最大金额</Comment>
+      <DataType>decimal(20,4)|0</DataType>
+    </column>
+    <column id="457" parent="40" name="game_config_json">
+      <Position>8</Position>
+      <Comment>格式为:{&quot;栏目ID1&quot;:[游戏ID1,游戏ID2],&quot;栏目ID2&quot;:[游戏ID5,游戏ID6]}</Comment>
+      <DataType>varchar(1000)|0</DataType>
+    </column>
+    <column id="458" parent="40" name="create_time">
+      <Position>9</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="459" parent="40" name="update_time">
+      <Position>10</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="460" parent="40" name="operator">
+      <Position>11</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="461" parent="40" name="state">
+      <Position>12</Position>
+      <Comment>关闭：0，开启:1,默认1</Comment>
+      <DataType>char(1)|0</DataType>
+    </column>
+    <column id="462" parent="40" name="memo">
+      <Position>13</Position>
+      <Comment>备注</Comment>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="463" parent="40" name="interval_config_json">
+      <Position>14</Position>
+      <DataType>text|0</DataType>
+    </column>
+    <index id="464" parent="40" name="sn">
+      <ColNames>sn
+state</ColNames>
+    </index>
+    <key id="465" parent="40" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="466" parent="41" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="467" parent="41" name="sn">
+      <Position>2</Position>
+      <Comment>厅编码</Comment>
+      <DataType>char(4)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="468" parent="41" name="user_id">
+      <Position>3</Position>
+      <Comment>用户ID</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="469" parent="41" name="order_id">
+      <Position>4</Position>
+      <Comment>订单ID</Comment>
+      <DataType>varchar(64)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="470" parent="41" name="plan_id">
+      <Position>5</Position>
+      <Comment>方案ID</Comment>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="471" parent="41" name="transaction_time">
+      <Position>6</Position>
+      <Comment>交易时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="472" parent="41" name="base_rate">
+      <Position>7</Position>
+      <Comment>基准利率</Comment>
+      <DataType>decimal(16,6)|0</DataType>
+      <DefaultExpression>&apos;0.000000&apos;</DefaultExpression>
+    </column>
+    <column id="473" parent="41" name="extra_rate">
+      <Position>8</Position>
+      <Comment>额外利率</Comment>
+      <DataType>decimal(16,6)|0</DataType>
+      <DefaultExpression>&apos;0.000000&apos;</DefaultExpression>
+    </column>
+    <column id="474" parent="41" name="hours">
+      <Position>9</Position>
+      <Comment>小时数</Comment>
+      <DataType>int(11)|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="475" parent="41" name="before_amount">
+      <Position>10</Position>
+      <Comment>入帐前金额</Comment>
+      <DataType>decimal(16,6)|0</DataType>
+      <DefaultExpression>&apos;0.000000&apos;</DefaultExpression>
+    </column>
+    <column id="476" parent="41" name="amount">
+      <Position>11</Position>
+      <Comment>金额</Comment>
+      <DataType>decimal(16,6)|0</DataType>
+      <DefaultExpression>&apos;0.000000&apos;</DefaultExpression>
+    </column>
+    <column id="477" parent="41" name="after_amount">
+      <Position>12</Position>
+      <Comment>入帐后金额</Comment>
+      <DataType>decimal(16,6)|0</DataType>
+      <DefaultExpression>&apos;0.000000&apos;</DefaultExpression>
+    </column>
+    <column id="478" parent="41" name="type">
+      <Position>13</Position>
+      <Comment>交易类型 0：余额转入余额宝 1：收益转入余额宝  2：本金转出到余额 3：收益转出到余额</Comment>
+      <DataType>int(2)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="479" parent="41" name="remark">
+      <Position>14</Position>
+      <Comment>备注信息</Comment>
+      <DataType>varchar(512)|0</DataType>
+    </column>
+    <index id="480" parent="41" name="idx_sn_transaction_time">
+      <ColNames>sn
+transaction_time</ColNames>
+    </index>
+    <index id="481" parent="41" name="idx_sn_type">
+      <ColNames>sn
+type</ColNames>
+    </index>
+    <index id="482" parent="41" name="idx_sn_userId_orderId">
+      <ColNames>sn
+user_id
+order_id
+type</ColNames>
+    </index>
+    <key id="483" parent="41" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="484" parent="42" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="485" parent="42" name="sn">
+      <Position>2</Position>
+      <Comment>厅编码</Comment>
+      <DataType>char(4)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="486" parent="42" name="user_id">
+      <Position>3</Position>
+      <Comment>用户ID</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="487" parent="42" name="order_id">
+      <Position>4</Position>
+      <Comment>订单ID</Comment>
+      <DataType>varchar(64)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="488" parent="42" name="record_id">
+      <Position>5</Position>
+      <Comment>交易记录详情ID</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="489" parent="42" name="amount">
+      <Position>6</Position>
+      <Comment>交易金额</Comment>
+      <DataType>decimal(16,6)|0</DataType>
+      <DefaultExpression>&apos;0.000000&apos;</DefaultExpression>
+    </column>
+    <column id="490" parent="42" name="time">
+      <Position>7</Position>
+      <Comment>统计时间</Comment>
+      <DataType>int(11)|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="491" parent="42" name="hours">
+      <Position>8</Position>
+      <Comment>统计小时</Comment>
+      <DataType>int(4)|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="492" parent="42" name="start_time">
+      <Position>9</Position>
+      <Comment>周期开始时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="493" parent="42" name="end_time">
+      <Position>10</Position>
+      <Comment>周期结束时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="494" parent="42" name="base_rate">
+      <Position>11</Position>
+      <Comment>统计当时的基准利率</Comment>
+      <DataType>decimal(16,6)|0</DataType>
+      <DefaultExpression>&apos;0.000000&apos;</DefaultExpression>
+    </column>
+    <column id="495" parent="42" name="extra_rate">
+      <Position>12</Position>
+      <Comment>统计当时的额外利率</Comment>
+      <DataType>decimal(16,6)|0</DataType>
+      <DefaultExpression>&apos;0.000000&apos;</DefaultExpression>
+    </column>
+    <column id="496" parent="42" name="income">
+      <Position>13</Position>
+      <Comment>收益</Comment>
+      <DataType>decimal(16,6)|0</DataType>
+      <DefaultExpression>&apos;0.000000&apos;</DefaultExpression>
+    </column>
+    <column id="497" parent="42" name="create_time">
+      <Position>14</Position>
+      <Comment>创建时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="498" parent="42" name="update_time">
+      <Position>15</Position>
+      <Comment>更新时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="499" parent="42" name="mark">
+      <Position>16</Position>
+      <Comment>标记</Comment>
+      <DataType>int(2)|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <index id="500" parent="42" name="idx_mark_updateTime">
+      <ColNames>mark
+update_time</ColNames>
+    </index>
+    <index id="501" parent="42" name="idx_sn_userId_orderId_recordId">
+      <ColNames>sn
+user_id
+order_id
+record_id</ColNames>
+    </index>
+    <index id="502" parent="42" name="idx_time_hours">
+      <ColNames>sn
+user_id
+time
+hours</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="503" parent="42" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="504" parent="42" name="idx_time_hours">
+      <ColNames>sn
+user_id
+time
+hours</ColNames>
+      <UnderlyingIndexName>idx_time_hours</UnderlyingIndexName>
+    </key>
+    <column id="505" parent="43" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="506" parent="43" name="sn">
+      <Position>2</Position>
+      <Comment>厅编码</Comment>
+      <DataType>char(4)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="507" parent="43" name="user_id">
+      <Position>3</Position>
+      <Comment>用户ID</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="508" parent="43" name="order_id">
+      <Position>4</Position>
+      <Comment>订单ID</Comment>
+      <DataType>varchar(64)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="509" parent="43" name="record_id">
+      <Position>5</Position>
+      <Comment>交易记录详情ID</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="510" parent="43" name="amount">
+      <Position>6</Position>
+      <Comment>交易金额</Comment>
+      <DataType>decimal(16,6)|0</DataType>
+      <DefaultExpression>&apos;0.000000&apos;</DefaultExpression>
+    </column>
+    <column id="511" parent="43" name="start_time">
+      <Position>7</Position>
+      <Comment>周期开始时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="512" parent="43" name="end_time">
+      <Position>8</Position>
+      <Comment>周期结束时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="513" parent="43" name="base_rate">
+      <Position>9</Position>
+      <Comment>统计当时的基准利率</Comment>
+      <DataType>decimal(16,6)|0</DataType>
+      <DefaultExpression>&apos;0.000000&apos;</DefaultExpression>
+    </column>
+    <column id="514" parent="43" name="extra_rate">
+      <Position>10</Position>
+      <Comment>统计当时的额外利率</Comment>
+      <DataType>decimal(16,6)|0</DataType>
+      <DefaultExpression>&apos;0.000000&apos;</DefaultExpression>
+    </column>
+    <column id="515" parent="43" name="income">
+      <Position>11</Position>
+      <Comment>收益</Comment>
+      <DataType>decimal(16,6)|0</DataType>
+      <DefaultExpression>&apos;0.000000&apos;</DefaultExpression>
+    </column>
+    <column id="516" parent="43" name="create_time">
+      <Position>12</Position>
+      <Comment>创建时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <index id="517" parent="43" name="idx_sn_userId_orderId_recordId">
+      <ColNames>sn
+user_id
+order_id
+record_id</ColNames>
+    </index>
+    <index id="518" parent="43" name="idx_time_hours">
+      <ColNames>sn
+user_id
+start_time</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="519" parent="43" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="520" parent="43" name="idx_time_hours">
+      <ColNames>sn
+user_id
+start_time</ColNames>
+      <UnderlyingIndexName>idx_time_hours</UnderlyingIndexName>
+    </key>
+    <column id="521" parent="44" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="522" parent="44" name="sn">
+      <Position>2</Position>
+      <Comment>厅编码</Comment>
+      <DataType>char(4)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="523" parent="44" name="action">
+      <Position>3</Position>
+      <Comment>动作：1：启用，2：停用，3：人工强制终止，4：系统终止，5：修改</Comment>
+      <DataType>int(2)|0</DataType>
+    </column>
+    <column id="524" parent="44" name="module">
+      <Position>4</Position>
+      <Comment>模块：1：余额宝:2：余额宝备注:3：余额宝设定</Comment>
+      <DataType>int(2)|0</DataType>
+    </column>
+    <column id="525" parent="44" name="opt_ip">
+      <Position>5</Position>
+      <Comment>操作IP</Comment>
+      <DataType>varchar(64)|0</DataType>
+    </column>
+    <column id="526" parent="44" name="opt_area">
+      <Position>6</Position>
+      <Comment>操作地区</Comment>
+      <DataType>varchar(256)|0</DataType>
+    </column>
+    <column id="527" parent="44" name="opt_user_id">
+      <Position>7</Position>
+      <Comment>用户ID</Comment>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="528" parent="44" name="opt_login_id">
+      <Position>8</Position>
+      <Comment>登陆ID</Comment>
+      <DataType>varchar(64)|0</DataType>
+    </column>
+    <column id="529" parent="44" name="content">
+      <Position>9</Position>
+      <Comment>操作内容</Comment>
+      <DataType>longtext|0</DataType>
+    </column>
+    <column id="530" parent="44" name="content_en">
+      <Position>10</Position>
+      <Comment>操作内容</Comment>
+      <DataType>longtext|0</DataType>
+    </column>
+    <column id="531" parent="44" name="opt_time">
+      <Position>11</Position>
+      <Comment>操作时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <index id="532" parent="44" name="idx_sn_opt_time">
+      <ColNames>sn
+opt_time</ColNames>
+    </index>
+    <key id="533" parent="44" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="534" parent="45" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="535" parent="45" name="sn">
+      <Position>2</Position>
+      <Comment>厅编码</Comment>
+      <DataType>char(4)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="536" parent="45" name="user_id">
+      <Position>3</Position>
+      <Comment>用户ID</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="537" parent="45" name="order_id">
+      <Position>4</Position>
+      <Comment>订单ID</Comment>
+      <DataType>varchar(64)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="538" parent="45" name="amount">
+      <Position>5</Position>
+      <Comment>本金</Comment>
+      <DataType>decimal(16,6)|0</DataType>
+      <DefaultExpression>&apos;0.000000&apos;</DefaultExpression>
+    </column>
+    <column id="539" parent="45" name="income">
+      <Position>6</Position>
+      <Comment>收益</Comment>
+      <DataType>decimal(16,6)|0</DataType>
+      <DefaultExpression>&apos;0.000000&apos;</DefaultExpression>
+    </column>
+    <column id="540" parent="45" name="last_total_income">
+      <Position>7</Position>
+      <Comment>上次累计收益</Comment>
+      <DataType>decimal(16,6)|0</DataType>
+      <DefaultExpression>&apos;0.000000&apos;</DefaultExpression>
+    </column>
+    <column id="541" parent="45" name="total_income">
+      <Position>8</Position>
+      <Comment>累计收益</Comment>
+      <DataType>decimal(16,6)|0</DataType>
+      <DefaultExpression>&apos;0.000000&apos;</DefaultExpression>
+    </column>
+    <column id="542" parent="45" name="state">
+      <Position>9</Position>
+      <Comment>状态：0：进行中 1：已终止</Comment>
+      <DataType>int(2)|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="543" parent="45" name="create_time">
+      <Position>10</Position>
+      <Comment>创建时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="544" parent="45" name="settle_time">
+      <Position>11</Position>
+      <Comment>结算时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <index id="545" parent="45" name="idx_sn_userId_orderId">
+      <ColNames>sn
+user_id
+order_id</ColNames>
+    </index>
+    <key id="546" parent="45" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="547" parent="46" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="548" parent="46" name="sn">
+      <Position>2</Position>
+      <Comment>厅编码</Comment>
+      <DataType>char(4)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="549" parent="46" name="user_id">
+      <Position>3</Position>
+      <Comment>用户ID</Comment>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="550" parent="46" name="order_id">
+      <Position>4</Position>
+      <Comment>订单ID</Comment>
+      <DataType>varchar(64)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="551" parent="46" name="plan_id">
+      <Position>5</Position>
+      <Comment>方案ID</Comment>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="552" parent="46" name="first_buy_time">
+      <Position>6</Position>
+      <Comment>首次买入时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="553" parent="46" name="last_buy_time">
+      <Position>7</Position>
+      <Comment>上次买入时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="554" parent="46" name="end_time">
+      <Position>8</Position>
+      <Comment>终止时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="555" parent="46" name="buy_total_amount">
+      <Position>9</Position>
+      <Comment>买入总金额</Comment>
+      <DataType>decimal(16,6)|0</DataType>
+      <DefaultExpression>&apos;0.000000&apos;</DefaultExpression>
+    </column>
+    <column id="556" parent="46" name="out_total_amount">
+      <Position>10</Position>
+      <Comment>已转出总金额</Comment>
+      <DataType>decimal(16,6)|0</DataType>
+      <DefaultExpression>&apos;0.000000&apos;</DefaultExpression>
+    </column>
+    <column id="557" parent="46" name="base_rate">
+      <Position>11</Position>
+      <Comment>基准利率</Comment>
+      <DataType>decimal(16,6)|0</DataType>
+      <DefaultExpression>&apos;0.000000&apos;</DefaultExpression>
+    </column>
+    <column id="558" parent="46" name="extra_rate">
+      <Position>12</Position>
+      <Comment>额外利率</Comment>
+      <DataType>decimal(16,6)|0</DataType>
+      <DefaultExpression>&apos;0.000000&apos;</DefaultExpression>
+    </column>
+    <column id="559" parent="46" name="total_income">
+      <Position>13</Position>
+      <Comment>累计收益</Comment>
+      <DataType>decimal(16,6)|0</DataType>
+      <DefaultExpression>&apos;0.000000&apos;</DefaultExpression>
+    </column>
+    <column id="560" parent="46" name="out_total_income">
+      <Position>14</Position>
+      <Comment>已转出总收益</Comment>
+      <DataType>decimal(16,6)|0</DataType>
+      <DefaultExpression>&apos;0.000000&apos;</DefaultExpression>
+    </column>
+    <column id="561" parent="46" name="state">
+      <Position>15</Position>
+      <Comment>状态：0：进行中 1：已终止</Comment>
+      <DataType>int(2)|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="562" parent="46" name="operater_user_id">
+      <Position>16</Position>
+      <Comment>操作者userId</Comment>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="563" parent="46" name="operater_login_id">
+      <Position>17</Position>
+      <Comment>操作者loginId</Comment>
+      <DataType>varchar(128)|0</DataType>
+    </column>
+    <column id="564" parent="46" name="remark">
+      <Position>18</Position>
+      <Comment>备注</Comment>
+      <DataType>varchar(512)|0</DataType>
+    </column>
+    <column id="565" parent="46" name="buy_times">
+      <Position>19</Position>
+      <Comment>购买累计次数</Comment>
+      <DataType>int(11)|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="566" parent="46" name="create_time">
+      <Position>20</Position>
+      <Comment>创建时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="567" parent="46" name="update_time">
+      <Position>21</Position>
+      <Comment>更新时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="568" parent="46" name="total_income_update_time">
+      <Position>22</Position>
+      <Comment>累计收益更新时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="569" parent="46" name="ext1">
+      <Position>23</Position>
+      <Comment>扩展字段1</Comment>
+      <DataType>varchar(512)|0</DataType>
+    </column>
+    <column id="570" parent="46" name="ext2">
+      <Position>24</Position>
+      <Comment>扩展字段2</Comment>
+      <DataType>varchar(512)|0</DataType>
+    </column>
+    <column id="571" parent="46" name="ext3">
+      <Position>25</Position>
+      <Comment>扩展字段3</Comment>
+      <DataType>varchar(512)|0</DataType>
+    </column>
+    <index id="572" parent="46" name="idx_sn_state">
+      <ColNames>sn
+state</ColNames>
+    </index>
+    <index id="573" parent="46" name="idx_sn_userId_orderId">
+      <ColNames>sn
+user_id
+order_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="574" parent="46" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="575" parent="46" name="idx_sn_userId_orderId">
+      <ColNames>sn
+user_id
+order_id</ColNames>
+      <UnderlyingIndexName>idx_sn_userId_orderId</UnderlyingIndexName>
+    </key>
+    <column id="576" parent="47" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="577" parent="47" name="sn">
+      <Position>2</Position>
+      <Comment>厅编码</Comment>
+      <DataType>char(4)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="578" parent="47" name="plan_name">
+      <Position>3</Position>
+      <Comment>方案名称</Comment>
+      <DataType>varchar(128)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;默认方案&apos;</DefaultExpression>
+    </column>
+    <column id="579" parent="47" name="state">
+      <Position>4</Position>
+      <Comment>开关状态 0:关闭、1:开启</Comment>
+      <DataType>int(2)|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="580" parent="47" name="layer_ids">
+      <Position>5</Position>
+      <Comment>层级ID，多个层级ID用”,”分隔</Comment>
+      <DataType>varchar(4096)|0</DataType>
+    </column>
+    <column id="581" parent="47" name="base_rate">
+      <Position>6</Position>
+      <Comment>基准利率</Comment>
+      <DataType>decimal(16,6)|0</DataType>
+      <DefaultExpression>&apos;0.000000&apos;</DefaultExpression>
+    </column>
+    <column id="582" parent="47" name="extra_rate">
+      <Position>7</Position>
+      <Comment>额外利率</Comment>
+      <DataType>decimal(16,6)|0</DataType>
+      <DefaultExpression>&apos;0.000000&apos;</DefaultExpression>
+    </column>
+    <column id="583" parent="47" name="extra_rate_time_limit">
+      <Position>8</Position>
+      <Comment>额外利率时限，单位：小时</Comment>
+      <DataType>int(11)|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="584" parent="47" name="buy_limit_multi">
+      <Position>9</Position>
+      <Comment>买入门槛倍数 0表示没门槛</Comment>
+      <DataType>decimal(16,2)|0</DataType>
+      <DefaultExpression>&apos;0.00&apos;</DefaultExpression>
+    </column>
+    <column id="585" parent="47" name="min_amount">
+      <Position>10</Position>
+      <Comment>最小单笔买入 0表示不限制</Comment>
+      <DataType>decimal(16,6)|0</DataType>
+      <DefaultExpression>&apos;0.000000&apos;</DefaultExpression>
+    </column>
+    <column id="586" parent="47" name="max_amount">
+      <Position>11</Position>
+      <Comment>最大单笔买入 0表示不限制</Comment>
+      <DataType>decimal(16,6)|0</DataType>
+      <DefaultExpression>&apos;0.000000&apos;</DefaultExpression>
+    </column>
+    <column id="587" parent="47" name="audit_multi">
+      <Position>12</Position>
+      <Comment>利息稽核倍数 0表示不稽核</Comment>
+      <DataType>decimal(16,2)|0</DataType>
+      <DefaultExpression>&apos;0.00&apos;</DefaultExpression>
+    </column>
+    <column id="588" parent="47" name="buy_times_limit">
+      <Position>13</Position>
+      <Comment>单个会员买入次数限制 0表示不限制</Comment>
+      <DataType>int(11)|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="589" parent="47" name="buy_interval_limit">
+      <Position>14</Position>
+      <Comment>再次购买间隔 单位：小时 0表示不限制</Comment>
+      <DataType>int(11)|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="590" parent="47" name="begin_time">
+      <Position>15</Position>
+      <Comment>开始时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="591" parent="47" name="max_income">
+      <Position>16</Position>
+      <Comment>最大收益</Comment>
+      <DataType>decimal(16,6)|0</DataType>
+      <DefaultExpression>&apos;0.000000&apos;</DefaultExpression>
+    </column>
+    <column id="592" parent="47" name="memo">
+      <Position>17</Position>
+      <Comment>备注信息</Comment>
+      <DataType>varchar(256)|0</DataType>
+    </column>
+    <column id="593" parent="47" name="create_time">
+      <Position>18</Position>
+      <Comment>创建时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="594" parent="47" name="update_time">
+      <Position>19</Position>
+      <Comment>更新时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="595" parent="47" name="operater_user_id">
+      <Position>20</Position>
+      <Comment>操作者userId</Comment>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="596" parent="47" name="operater_login_id">
+      <Position>21</Position>
+      <Comment>操作者loginId</Comment>
+      <DataType>varchar(256)|0</DataType>
+    </column>
+    <index id="597" parent="47" name="idx_sn_state">
+      <ColNames>sn
+state</ColNames>
+    </index>
+    <key id="598" parent="47" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="599" parent="48" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="600" parent="48" name="sn">
+      <Position>2</Position>
+      <Comment>厅编码</Comment>
+      <DataType>char(4)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="601" parent="48" name="user_id">
+      <Position>3</Position>
+      <Comment>用户ID</Comment>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="602" parent="48" name="plan_id">
+      <Position>4</Position>
+      <Comment>方案ID</Comment>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="603" parent="48" name="plan_name">
+      <Position>5</Position>
+      <Comment>方案名称</Comment>
+      <DataType>varchar(128)|0</DataType>
+    </column>
+    <column id="604" parent="48" name="state">
+      <Position>6</Position>
+      <Comment>开关状态 0:关闭、1:开启</Comment>
+      <DataType>int(2)|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="605" parent="48" name="layer_ids">
+      <Position>7</Position>
+      <Comment>层级ID，多个层级ID用”,”分隔</Comment>
+      <DataType>varchar(4096)|0</DataType>
+    </column>
+    <column id="606" parent="48" name="before_base_rate">
+      <Position>8</Position>
+      <Comment>变更前基准利率</Comment>
+      <DataType>decimal(16,6)|0</DataType>
+      <DefaultExpression>&apos;0.000000&apos;</DefaultExpression>
+    </column>
+    <column id="607" parent="48" name="after_base_rate">
+      <Position>9</Position>
+      <Comment>变更后基准利率</Comment>
+      <DataType>decimal(16,6)|0</DataType>
+      <DefaultExpression>&apos;0.000000&apos;</DefaultExpression>
+    </column>
+    <column id="608" parent="48" name="before_extra_rate">
+      <Position>10</Position>
+      <Comment>变更前额外利率</Comment>
+      <DataType>decimal(16,6)|0</DataType>
+      <DefaultExpression>&apos;0.000000&apos;</DefaultExpression>
+    </column>
+    <column id="609" parent="48" name="after_extra_rate">
+      <Position>11</Position>
+      <Comment>变更后额外利率</Comment>
+      <DataType>decimal(16,6)|0</DataType>
+      <DefaultExpression>&apos;0.000000&apos;</DefaultExpression>
+    </column>
+    <column id="610" parent="48" name="effect_time">
+      <Position>12</Position>
+      <Comment>生效开始时间,变更时间的下一个小时开始生效,仅当type=1时有效</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="611" parent="48" name="type">
+      <Position>13</Position>
+      <Comment>类型：0：普通属性更改 1：基准利率或额外利率更改</Comment>
+      <DataType>int(2)|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="612" parent="48" name="extra_rate_time_limit">
+      <Position>14</Position>
+      <Comment>额外利率时限，单位：小时</Comment>
+      <DataType>int(11)|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="613" parent="48" name="buy_limit_multi">
+      <Position>15</Position>
+      <Comment>买入门槛倍数 0表示没门槛</Comment>
+      <DataType>decimal(16,2)|0</DataType>
+      <DefaultExpression>&apos;0.00&apos;</DefaultExpression>
+    </column>
+    <column id="614" parent="48" name="min_amount">
+      <Position>16</Position>
+      <Comment>最小单笔买入 0表示不限制</Comment>
+      <DataType>decimal(16,6)|0</DataType>
+      <DefaultExpression>&apos;0.000000&apos;</DefaultExpression>
+    </column>
+    <column id="615" parent="48" name="max_amount">
+      <Position>17</Position>
+      <Comment>最大单笔买入 0表示不限制</Comment>
+      <DataType>decimal(16,6)|0</DataType>
+      <DefaultExpression>&apos;0.000000&apos;</DefaultExpression>
+    </column>
+    <column id="616" parent="48" name="audit_multi">
+      <Position>18</Position>
+      <Comment>利息稽核倍数 0表示不稽核</Comment>
+      <DataType>decimal(16,2)|0</DataType>
+      <DefaultExpression>&apos;0.00&apos;</DefaultExpression>
+    </column>
+    <column id="617" parent="48" name="buy_times_limit">
+      <Position>19</Position>
+      <Comment>单个会员买入次数限制 0表示不限制</Comment>
+      <DataType>int(11)|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="618" parent="48" name="buy_interval_limit">
+      <Position>20</Position>
+      <Comment>再次购买间隔 单位：小时 0表示不限制</Comment>
+      <DataType>int(11)|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="619" parent="48" name="begin_time">
+      <Position>21</Position>
+      <Comment>开始时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="620" parent="48" name="max_income">
+      <Position>22</Position>
+      <Comment>最大收益</Comment>
+      <DataType>decimal(16,6)|0</DataType>
+      <DefaultExpression>&apos;0.000000&apos;</DefaultExpression>
+    </column>
+    <column id="621" parent="48" name="memo">
+      <Position>23</Position>
+      <Comment>备注信息</Comment>
+      <DataType>varchar(256)|0</DataType>
+    </column>
+    <column id="622" parent="48" name="operater_user_id">
+      <Position>24</Position>
+      <Comment>操作者userId</Comment>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="623" parent="48" name="operater_login_id">
+      <Position>25</Position>
+      <Comment>操作者loginId</Comment>
+      <DataType>varchar(256)|0</DataType>
+    </column>
+    <column id="624" parent="48" name="create_time">
+      <Position>26</Position>
+      <Comment>创建时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <index id="625" parent="48" name="idx_sn_type_effect_time">
+      <ColNames>sn
+type
+effect_time</ColNames>
+    </index>
+    <key id="626" parent="48" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
